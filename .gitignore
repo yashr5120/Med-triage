@@ -1,0 +1,36 @@
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+*/node_modules/
+
+# Build output
+dist/
+build/
+client/dist/
+server/dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Uploads / temp audio
+server/uploads/
+server/tmp/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Graphify output
+graphify-out/

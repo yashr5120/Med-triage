@@ -1,0 +1,21 @@
+{
+  "name": "triagevoice-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TriageVoice AI — Voice-driven patient intake and clinical handoff prototype",
+  "workspaces": [
+    "client",
+    "server",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c blue,green \"npm run dev --workspace=server\" \"npm run dev --workspace=client\"",
+    "build": "npm run build --workspace=shared && npm run build --workspace=server && npm run build --workspace=client",
+    "test": "npm run test --workspace=server && npm run test --workspace=client",
+    "typecheck": "npm run typecheck --workspace=server && npm run typecheck --workspace=client",
+    "lint": "npm run lint --workspace=server && npm run lint --workspace=client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
